@@ -1,0 +1,29 @@
+
+.movie {
+    display: flex;
+    width: 45%;
+    background-color: white;
+    align-items: flex-start;
+    /*margin-bottom: 70px;*/
+    justify-content: space-between;
+    font-weight: 300;
+    padding: 20px;
+    border-radius: 5px;
+    color:#adaeb9;
+    margin: 70px 27px;
+}
+
+
+.cardsPicture {
+    position: relative;
+   top: -50px;
+    max-width: 150px;
+    width: 100%;
+    margin-right: 30px;
+
+}
+
+.movieTitle, .movieYear{
+font-weight: 300;
+    margin: 0;
+}
