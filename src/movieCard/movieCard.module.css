@@ -6,24 +6,34 @@
     align-items: flex-start;
     /*margin-bottom: 70px;*/
     justify-content: space-between;
-    font-weight: 300;
+    font-weight: 500;
     padding: 20px;
     border-radius: 5px;
-    color:#adaeb9;
+    color: #5a5a60;
     margin: 70px 27px;
+    text-decoration: none;
 }
 
 
 .cardsPicture {
     position: relative;
-   top: -50px;
+    top: -50px;
     max-width: 150px;
     width: 100%;
     margin-right: 30px;
 
 }
 
-.movieTitle, .movieYear{
-font-weight: 300;
+.movieTitle, .movieYear {
     margin: 0;
+}
+h3{
+    line-height: 25px;
+    font-size: 1.25em;
+    font-weight: 800;
+    text-shadow: 0 2px 2px rgb(0 0  40%);
+    margin: 0;
+}
+p{
+    font-weight: 500;
 }

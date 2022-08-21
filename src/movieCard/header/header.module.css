@@ -2,6 +2,17 @@
     display: flex;
     justify-content: center;
     padding: 20px;
+    height: 30px;
+}
+.button{
+    background-color: #6c6969;
+    color: black;
+    height: 30px;
+    border-radius: 50px;
+    width: 84px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    margin-left: 10px;
 }
 
 /*_____________________input_____________________*/
@@ -13,8 +24,9 @@
     background-color: transparent;
     border: 2px solid #6c6969;
     height: 30px;
-    width: 30px;
-    padding: 0 0px;
+    /*width: 30px;*/
+    width: 250px;
+    padding: 0 15px;
     font-size: 1.1em;
     font-weight: lighter;
     color: #6c6969;
@@ -25,11 +37,11 @@
     transition-timing-function: ease-out;
 }
 
-.inputsearch:focus {
-    width: 200px;
-    padding: 0 12px;
-    outline:none;
-}
+/*.inputsearch:focus {*/
+/*    width: 200px;*/
+/*    padding: 0 12px;*/
+/*    outline:none;*/
+/*}*/
 
 .inputsearch+.search:after {
     content: '';

@@ -2,14 +2,16 @@
 import {applyMiddleware, combineReducers, createStore} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-import {movieReducer} from "./movie-reducer";
+import {moviesReducer} from "./movies-reducer";
 import {appReducer} from "./app-reducer";
+import {movieDetailsReducer} from "./movie-details-reducer";
 
 // объединяя reducer-ы с помощью combineReducers,
 // мы задаём структуру нашего единственного объекта-состояния
 const rootReducer = combineReducers({
-    movie: movieReducer,
-    app:appReducer
+    movies: moviesReducer,
+    app:appReducer,
+    details:movieDetailsReducer
 
 })
 // непосредственно создаём store

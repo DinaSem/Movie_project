@@ -1,17 +1,22 @@
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import s from "./header.module.css";
+import {useDispatch} from "react-redux";
+import {searchMoviesTC} from "../state/movies-reducer";
 
-type PropsType = {
 
-    value:string
-    callBack:(value:string)=>void
-}
-export const Header = ({value,callBack}:PropsType) => {
-const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) => {
-    callBack(e.currentTarget.value)
-}
+export const Header = () => {
+    const dispatch = useDispatch()
+    const [value, setValue] = useState('')
 
-        return (
+
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setValue(e.currentTarget.value)
+    }
+    const onClickHandler = () => {
+        dispatch(searchMoviesTC(value))
+    }
+
+    return (
         <div className={s.headerContainer}>
             <div>
                 <input type="text"
@@ -20,12 +25,12 @@ const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) => {
                        onChange={onChangeHandler}
                        value={value}
                        autoFocus
-                  placeholder={'Search Movies'}
+                       placeholder={'Search Movies'}
                 />
+                <button className={s.button} onClick={onClickHandler}>Search</button>
                 <label className={s.search} htmlFor="input-search"></label>
                 <div><p>Вы ищете:{value}</p></div>
             </div>
-
 
 
         </div>
