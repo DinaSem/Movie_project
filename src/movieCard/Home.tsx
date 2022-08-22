@@ -11,7 +11,7 @@ import {Pagination} from "./Pagination";
 
 
 
-const genres: GenresType[] = ['all', 'Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary',
+const genres: GenresType[] = ['All', 'Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary',
     'Drama', 'Family', 'Fantasy', 'Film Noir', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'Romance',
     'Sci-Fi', 'Short', 'Sport', 'Superhero', 'Thriller', 'War', 'Western']
 
@@ -22,6 +22,8 @@ export const Home = React.memo(() => {
 
     const movies = useSelector<AppRootStateType, MovieType[]>(state => state.movies.movies)
     const currentGenreFromState = useSelector<AppRootStateType, GenresType>(state => state.movies.genre)
+    const pageNum = useSelector<AppRootStateType, number>(state => state.movies.page)
+    console.log("pageNum: ", pageNum)
 
     const status = useAppSelector((state) => state.app.status)
     const [variantOfGenres, setVariantOfGenres] = useState(genres[0])
@@ -36,9 +38,8 @@ export const Home = React.memo(() => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-
         dispatch(fetchMoviesTC())
-    }, [dispatch,currentGenreFromState,variantOfGenres])
+    }, [dispatch,currentGenreFromState,pageNum])
 
     const handleForGenres = useCallback((option: any) => {
         setVariantOfGenres(option)

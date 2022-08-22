@@ -8,7 +8,7 @@ const instance = axios.create({
 
 // api
 export const movieAPI = {
-    getMovie(params: {query_term?: string, genre?: GenresType, page_number: number }) {
+    getMovie(params: {query_term?: string, genre?: GenresType, page?: number }) {
         return instance.get<ResponseType>('list_movies.json', {params}).then(res => res.data.data);
     },
     getMovieDetails(id: number) {

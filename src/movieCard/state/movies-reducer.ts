@@ -9,6 +9,7 @@ type InitialStateType = {
     // limit: number
     movie_count: number
     page_number: number
+    page:number
     // params:{
     //     // query_term: string,
     //     genre:GenresType
@@ -25,6 +26,7 @@ const initialState = {
     // limit: 20,
     movie_count: 0,
     page_number: 1,
+    page:1
 }
 
 export const moviesReducer = (state: InitialStateType = initialState, action: MovieActionsType): InitialStateType => {
@@ -39,7 +41,7 @@ export const moviesReducer = (state: InitialStateType = initialState, action: Mo
             return {...state, genre: action.genre}
         }
         case "SET-PAGE":
-            return {...state, page_number:action.page_number}
+            return {...state, page:action.page}
         default:
             return state
     }
@@ -48,7 +50,7 @@ export const moviesReducer = (state: InitialStateType = initialState, action: Mo
 // actions
 export const setMovieAC = (movies: Array<MovieType>,movie_count:number) => ({type: 'SET-MOVIES', movies,movie_count} as const)
 export const setGenreMovieAC = (genre: GenresType) => ({type: 'SET-GENRE', genre} as const)
-export const setPageAC = (page_number:number) => ({type: 'SET-PAGE', page_number} as const)
+export const setPageAC = (page:number) => ({type: 'SET-PAGE', page} as const)
 
 
 // thunks
@@ -56,15 +58,13 @@ export const fetchMoviesTC = () => {
     return (dispatch: Dispatch<MovieActionsType>, getState: () => AppRootStateType) => {
 
         dispatch(setAppStatusAC('loading'))
-        let {genre,page_number} = getState().movies;
-        movieAPI.getMovie({genre,page_number})
+        let {genre,page} = getState().movies;
+        movieAPI.getMovie({genre,page})
             .then((res) => {
-                console.log({res})
                 dispatch(setMovieAC(
                     res.movies,
                     res.movie_count,
                     ))
-                console.log(res.page_number)
                 dispatch(setAppStatusAC('succeeded'))
             })
     }
@@ -72,31 +72,30 @@ export const fetchMoviesTC = () => {
 export const searchMoviesTC = (query_term: string) => {
     return (dispatch: Dispatch<MovieActionsType>, getState: () => AppRootStateType) => {
         dispatch(setAppStatusAC('loading'))
-        let {genre,page_number} = getState().movies;
+        let {genre,page} = getState().movies;
         // const {query_term} = params
-        movieAPI.getMovie({query_term, genre,page_number})
-
+        movieAPI.getMovie({query_term, genre,page})
             .then((res) => {
-                dispatch(setMovieAC(res.movies,res.page_number,))
+                dispatch(setMovieAC(res.movies,res.movie_count))
                 dispatch(setAppStatusAC('succeeded'))
             })
     }
 }
-export const setPageTC = (page_number:number) => {
-    return (dispatch: Dispatch<MovieActionsType>, getState: () => AppRootStateType) => {
-        dispatch(setAppStatusAC('loading'))
-        let {genre,page_number} = getState().movies;
-        // const {query_term} = params
-        movieAPI.getMovie({genre,page_number})
-            .then((res) => {
-                dispatch(setPageAC(
-                    res.page_number,
-                ))
-                console.log(res.movie_count)
-                dispatch(setAppStatusAC('succeeded'))
-            })
-    }
-}
+// export const setPageTC = (page_number:number) => {
+//     return (dispatch: Dispatch<MovieActionsType>, getState: () => AppRootStateType) => {
+//         dispatch(setAppStatusAC('loading'))
+//         let {genre,page_number} = getState().movies;
+//         // const {query_term} = params
+//         movieAPI.getMovie({genre,page_number})
+//             .then((res) => {
+//                 dispatch(setPageAC(
+//                     res.page_number,
+//                 ))
+//                 console.log(res.movie_count)
+//                 dispatch(setAppStatusAC('succeeded'))
+//             })
+//     }
+// }
 
 
 
@@ -107,7 +106,7 @@ export type SetPageACType = ReturnType<typeof setPageAC>;
 
 type MovieActionsType = SetMovieACType | AppReducerType | SetGenreMovieACType|SetPageACType
 export type GenresType =
-    'all'
+    'All'
     | 'Action'
     | 'Adventure'
     | 'Animation'
