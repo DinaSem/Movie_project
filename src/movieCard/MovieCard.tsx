@@ -18,7 +18,7 @@ export const MovieCard = ({movie}: PropsType) => {
             <div className={s.textWrapper}>
                 <h3 className={s.movieTitle}>{movie.title}</h3>
                 <h5 className={s.movieYear}>{movie.year}</h5>
-                <h5 className={s.movieYear}>{movie.rating} / 10</h5>
+                <h5 className={s.movieYear}>❤ {movie.rating} / 10</h5>
 
                 <div>{movie.genres?.map((g,i) => {
                     return <span key={i}> {g}</span>

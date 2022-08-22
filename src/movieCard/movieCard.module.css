@@ -1,7 +1,7 @@
 
 .movie {
     display: flex;
-    width: 45%;
+    width: 29%;
     background-color: white;
     align-items: flex-start;
     /*margin-bottom: 70px;*/
@@ -12,6 +12,8 @@
     color: #5a5a60;
     margin: 70px 27px;
     text-decoration: none;
+    box-shadow: 1px 3px 6px #e76148, 1px 3px 6px #e76148;
+    text-align: justify;
 }
 
 

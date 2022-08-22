@@ -1,9 +1,7 @@
 import React from 'react';
-import s from './Navbar.module.css'
-import logo from './dina.png'
-import {Link} from "react-router-dom";
+import s from './Footer.module.css'
 
-export const Navbar = () => {
+export const Footer = () => {
     return (
             <div className={s.nav}>
                 {/*<nav>*/}
@@ -13,7 +11,7 @@ export const Navbar = () => {
                 <input type="checkbox" id={s.navCheck}/>
                     <div className={s.navHeader}>
                         <div className={s.navTitle}>
-                            <img className={s.logo} src={logo} alt=""/>
+                            JoGeek
                         </div>
                     </div>
                     <div className={s.navBtn}>
@@ -25,7 +23,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className={s.navLinks}>
-                        <Link to={{pathname:'/'}}>Главная</Link>
+                        <a href="//github.io/jo_geek" target="_blank">Github</a>
                         <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
                         <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
                         <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>

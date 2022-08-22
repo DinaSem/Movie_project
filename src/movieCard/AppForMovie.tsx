@@ -5,6 +5,7 @@ import {About} from "./About";
 import {Navbar} from "./Navbar";
 import {MovieDetails} from "./MovieDetails";
 import s from './appForMovie.module.css'
+import {Footer} from "./Footer";
 
 const AppForMovie = () => {
 
@@ -17,8 +18,8 @@ const AppForMovie = () => {
                 <Route path='/404' element={<h1>404: PAGE NOT FOUND</h1>} />
                 <Route path='*' element={<Navigate to='/404'/>} />
                 <Route path='details/:id' element={<MovieDetails />} />
-
             </Routes>
+            <Footer/>
         </div>
     );
 };

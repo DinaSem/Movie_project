@@ -9,7 +9,7 @@ body{
     letter-spacing: -.03em;
     font-size: 16px;
     margin: 0 auto;
-    background-color: #1d1d1d;
+    background: rgb(23, 23, 23);
     text-align: center;
     -webkit-font-smoothing: antialiased;
     color: #fff;
@@ -21,7 +21,7 @@ body,
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    background: rgb(29, 29, 29)
 }
 /*.loader{*/
 /*    width: 100%;*/

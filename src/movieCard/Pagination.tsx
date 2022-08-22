@@ -36,7 +36,7 @@ export const Pagination = React.memo(() => {
 
         const paginationRender = (
             <div className={s.flexContainer}>
-                <div> currentPage : { pageNum } </div>
+                <div> Founded : { mov } movies</div>
 
                 <div className={s.paginateCtn}>
                     <div className={s.roundEffect} onClick={prevPage}> &lsaquo; </div>

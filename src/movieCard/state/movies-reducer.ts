@@ -10,6 +10,7 @@ type InitialStateType = {
     movie_count: number
     page_number: number
     page:number
+    query_term: string
     // params:{
     //     // query_term: string,
     //     genre:GenresType
@@ -26,14 +27,15 @@ const initialState = {
     // limit: 20,
     movie_count: 0,
     page_number: 1,
-    page:1
+    page:1,
+    query_term: ''
 }
 
 export const moviesReducer = (state: InitialStateType = initialState, action: MovieActionsType): InitialStateType => {
     switch (action.type) {
         case "SET-MOVIES":
             return {...state,
-                movies: action.movies.map(m => ({...m, entityStatus: 'idle'})),
+                movies: action.movies?.map(m => ({...m, entityStatus: 'idle'})),
                 movie_count:action.movie_count,
             }
         case "SET-GENRE": {
