@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {MovieType} from "./movie-api";
+import {DataType, MovieType} from "./movie-api";
 import {MovieCard} from "./MovieCard";
 import s from './appForMovie.module.css'
 import {Header} from "./header/Header";
@@ -7,7 +7,8 @@ import SuperSelect from "../components/SuperSelect/SuperSelect";
 import {fetchMoviesTC, GenresType, RatingType, setGenreMovieAC} from "./state/movies-reducer";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType, useAppSelector} from "./state/store";
-import Paginator from "./Paginator";
+import {Pagination} from "./Pagination";
+
 
 
 const genres: GenresType[] = ['all', 'Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary',
@@ -18,7 +19,8 @@ const genres: GenresType[] = ['all', 'Action', 'Adventure', 'Animation', 'Biogra
 // const ratingVariants: RatingType[] = ['all', '9', '8', '7', '6', '5', '4', '3', '2', '1', '0']
 
 export const Home = React.memo(() => {
-    const movies = useSelector<AppRootStateType, Array<MovieType>>(state => state.movies.movies)
+
+    const movies = useSelector<AppRootStateType, MovieType[]>(state => state.movies.movies)
     const currentGenreFromState = useSelector<AppRootStateType, GenresType>(state => state.movies.genre)
 
     const status = useAppSelector((state) => state.app.status)
@@ -43,8 +45,13 @@ export const Home = React.memo(() => {
         dispatch(setGenreMovieAC(option))
     },[dispatch])
 
-    console.log('variantOfGenres',variantOfGenres)
-    console.log('genreFromState',currentGenreFromState)
+    const onPageChanged = (pageNumber: number) => {
+        // console.log("pageNumber: ", pageNumber)
+        // dispatch(setCurrentPageTC(pageNumber))
+    }
+
+    // console.log('variantOfGenres',variantOfGenres)
+    // console.log('genreFromState',currentGenreFromState)
     // // const handleForSorting = (e: any) => {
     // //     console.log(e.currentTarget.value)
     // //     movieAPI.getMovieWithSort(e.currentTarget.value)
@@ -67,26 +74,26 @@ export const Home = React.memo(() => {
 
     return (
         <div className={s.wrapper}>
+
             <Header/>
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div>
                     <div style={{marginRight: '5px', color: "white"}}><p>Genres</p></div>
-
-                    <div>
 
                         <SuperSelect options={genres}
                                      value={variantOfGenres}
                                      // onChange={handleForGenres}
                                      onChangeOption={handleForGenres}
                         />
-                    {/*    <Paginator //cardPacksTotalCount={packs.cardPacksTotalCount}*/}
-                    {/*               pageCount={packs.pageCount}*/}
+                    {/*    <Paginator cardPacksTotalCount={mov.cardPacksTotalCount}*/}
+                    {/*               pageCount={mov.pageCount}*/}
                     {/*               pageSize={10}*/}
-                    {/*               currentPage={packs.page}*/}
+                    {/*               currentPage={mov.currentPage}*/}
                     {/*               onPageChanged={onPageChanged}*/}
                     {/*               portionSize={undefined}/>*/}
-                    {/*</>*/}
-                    </div>
+
+                    {/*</div>*/}
+                        <Pagination/>
                 </div>
             </div>
             {status === "loading"
@@ -100,6 +107,12 @@ export const Home = React.memo(() => {
             }
 
 
+            {/*<Paginator cardPacksTotalCount={mov.cardPacksTotalCount}*/}
+            {/*           pageCount={mov.pageCount}*/}
+            {/*           pageSize={10}*/}
+            {/*           currentPage={mov.currentPage}*/}
+            {/*           onPageChanged={onPageChanged}*/}
+            {/*           portionSize={undefined}/>*/}
             {/*    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>*/}
             {/*        /!*<div>*!/*/}
             {/*        /!*    <div style={{marginRight: '5px'}}><p>Sort by</p></div>*!/*/}
