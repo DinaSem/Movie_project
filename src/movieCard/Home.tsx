@@ -56,6 +56,9 @@ export const Home = React.memo(() => {
                     })}
                 </section>
             }
+            <div >
+                <Pagination/>
+            </div>
 
 
             {/*<Paginator cardPacksTotalCount={mov.cardPacksTotalCount}*/}

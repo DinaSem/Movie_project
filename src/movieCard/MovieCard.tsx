@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {Link, useParams} from 'react-router-dom';
-import {movieAPI, MovieType} from "./movie-api";
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {MovieType} from "./movie-api";
 import s from './movieCard.module.css'
 
 type PropsType = {

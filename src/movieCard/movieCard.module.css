@@ -12,14 +12,14 @@
     color: #5a5a60;
     margin: 70px 27px;
     text-decoration: none;
-    box-shadow: 1px 3px 6px #e76148, 1px 3px 6px #e76148;
+    box-shadow: 1px 2px 4px #e76148, 1px 2px 4px #e76148;
     text-align: justify;
 }
 
 
 .cardsPicture {
-    position: relative;
-    top: -50px;
+    /*position: relative;*/
+    top: -30px;
     max-width: 150px;
     width: 100%;
     margin-right: 30px;
@@ -35,6 +35,7 @@ h3{
     font-weight: 800;
     text-shadow: 0 2px 2px rgb(0 0  40%);
     margin: 0;
+    text-align: start;
 }
 p{
     font-weight: 500;

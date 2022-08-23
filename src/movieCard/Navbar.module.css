@@ -8,14 +8,14 @@
 /*}*/
 
 .nav {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background: rgb(23, 23, 23);
     border-bottom: 1px solid rgb(47, 47, 47);
     color: rgb(145, 145, 145);
     display: flex;
     justify-content: space-around;
-    position: -webkit-sticky;
+    position: fixed;
 }
 
 .nav > .navHeader {
