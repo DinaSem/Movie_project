@@ -23,7 +23,7 @@ export const MovieCard = ({movie}: PropsType) => {
                 <div>{movie.genres?.map((g,i) => {
                     return <span key={i}> {g}</span>
                 })}</div>
-                <p>{movie.summary.slice(0, 140)}...</p>
+                <p>{movie.summary.slice(0, 130)}...</p>
             </div>
         </Link>
 

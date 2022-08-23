@@ -7,10 +7,10 @@
     /*margin-bottom: 70px;*/
     justify-content: space-between;
     font-weight: 500;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
     color: #5a5a60;
-    margin: 70px 27px;
+    margin: 40px 27px;
     text-decoration: none;
     box-shadow: 1px 2px 4px #e76148, 1px 2px 4px #e76148;
     text-align: justify;
@@ -22,7 +22,7 @@
     top: -30px;
     max-width: 150px;
     width: 100%;
-    margin-right: 30px;
+    margin-right: 20px;
 
 }
 

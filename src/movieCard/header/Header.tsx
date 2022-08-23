@@ -1,4 +1,11 @@
-import React, {ChangeEvent, useCallback, useState} from 'react';
+import React, {
+    ChangeEvent,
+    DetailedHTMLProps,
+    InputHTMLAttributes,
+    KeyboardEventHandler,
+    useCallback,
+    useState
+} from 'react';
 import s from "./header.module.css";
 import {useDispatch} from "react-redux";
 import {GenresType, searchMoviesTC, setGenreMovieAC} from "../state/movies-reducer";
@@ -16,8 +23,12 @@ export const Header = () => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
     }
+    const onKeyPressHandler = (e: DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            dispatch(searchMoviesTC(value))
+        }
+    }
     const onClickHandler = () => {
-        console.log('value',value)
         dispatch(searchMoviesTC(value))
     }
     const handleForGenres = useCallback((option: any) => {
@@ -34,6 +45,7 @@ export const Header = () => {
                            className={s.inputsearch}
                            id={s.inputsearch}
                            onChange={onChangeHandler}
+                           onKeyPress={onKeyPressHandler}
                            value={value}
                            autoFocus
                            // placeholder={'Search Movies'}
@@ -41,7 +53,7 @@ export const Header = () => {
                     />
 
                 <button className={s.button} onClick={onClickHandler}>Search</button>
-                <p>Movies with {value} </p>
+                {/*<p>Movies with {value} </p>*/}
                 <label className={s.search} htmlFor="input-search"></label>
             </div>
 
