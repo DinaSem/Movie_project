@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Movies_project/static/css/main.02928f2c.chunk.css",
-    "main.js": "/Movies_project/static/js/main.33abd7a0.chunk.js",
-    "main.js.map": "/Movies_project/static/js/main.33abd7a0.chunk.js.map",
+    "main.css": "/Movies_project/static/css/main.5aec0180.chunk.css",
+    "main.js": "/Movies_project/static/js/main.6580f3ce.chunk.js",
+    "main.js.map": "/Movies_project/static/js/main.6580f3ce.chunk.js.map",
     "runtime-main.js": "/Movies_project/static/js/runtime-main.c3d8efd2.js",
     "runtime-main.js.map": "/Movies_project/static/js/runtime-main.c3d8efd2.js.map",
     "static/js/2.b7938516.chunk.js": "/Movies_project/static/js/2.b7938516.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.e5fa259e.chunk.js": "/Movies_project/static/js/3.e5fa259e.chunk.js",
     "static/js/3.e5fa259e.chunk.js.map": "/Movies_project/static/js/3.e5fa259e.chunk.js.map",
     "index.html": "/Movies_project/index.html",
-    "static/css/main.02928f2c.chunk.css.map": "/Movies_project/static/css/main.02928f2c.chunk.css.map",
+    "static/css/main.5aec0180.chunk.css.map": "/Movies_project/static/css/main.5aec0180.chunk.css.map",
     "static/js/2.b7938516.chunk.js.LICENSE.txt": "/Movies_project/static/js/2.b7938516.chunk.js.LICENSE.txt",
     "static/media/github_logo.4b39480e.png": "/Movies_project/static/media/github_logo.4b39480e.png",
     "static/media/logo_telegram.02c66337.png": "/Movies_project/static/media/logo_telegram.02c66337.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.c3d8efd2.js",
     "static/js/2.b7938516.chunk.js",
-    "static/css/main.02928f2c.chunk.css",
-    "static/js/main.33abd7a0.chunk.js"
+    "static/css/main.5aec0180.chunk.css",
+    "static/js/main.6580f3ce.chunk.js"
   ]
 }
