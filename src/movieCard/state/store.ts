@@ -2,9 +2,9 @@
 import {applyMiddleware, combineReducers, createStore} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-import {moviesReducer} from "./movies-reducer";
-import {appReducer} from "./app-reducer";
-import {movieDetailsReducer} from "./movie-details-reducer";
+import {moviesReducer} from "../bll/movies-reducer";
+import {appReducer} from "../bll/app-reducer";
+import {movieDetailsReducer} from "../bll/movie-details-reducer";
 
 // объединяя reducer-ы с помощью combineReducers,
 // мы задаём структуру нашего единственного объекта-состояния

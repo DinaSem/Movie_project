@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Pagination.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {AppRootStateType} from "./state/store";
-import {setPageAC} from "./state/movies-reducer";
+import {AppRootStateType} from "../../movieCard/state/store";
+import {setPageAC} from "../../movieCard/bll/movies-reducer";
 
 export const Pagination = React.memo(() => {
     const mov = useSelector<AppRootStateType, number>(state => state.movies.movie_count)

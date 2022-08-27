@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {useParams} from "react-router-dom";
-import { MovieType} from "./movie-api";
+import { MovieType} from "../../dal/movie-api";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchMovieDetailsTC} from "./state/movie-details-reducer";
-import {AppRootStateType, useAppSelector} from "./state/store";
+import {fetchMovieDetailsTC} from "../bll/movie-details-reducer";
+import {AppRootStateType, useAppSelector} from "../state/store";
 import s from './movieDetails.module.css'
 
 export const MovieDetails = () => {

@@ -1,11 +1,11 @@
 import React from 'react';
 import {Navigate, Route, Routes, useParams} from "react-router-dom";
-import {Home} from "./Home";
-import {About} from "./About";
-import {Navbar} from "./Navbar";
-import {MovieDetails} from "./MovieDetails";
+import {Home} from "../movieCard/Home";
+import {About} from "../movieCard/About";
+import {Navbar} from "../movieCard/Navbar/Navbar";
+import {MovieDetails} from "../movieCard/MovieDetails/MovieDetails";
 import s from './appForMovie.module.css'
-import {Footer} from "./Footer";
+import {Footer} from "../movieCard/Footer/Footer";
 
 const AppForMovie = () => {
 

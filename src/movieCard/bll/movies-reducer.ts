@@ -1,7 +1,7 @@
-import {movieAPI, MovieType} from "../movie-api";
+import {movieAPI, MovieType} from "../../dal/movie-api";
 import {AppReducerType, RequestStatusType, setAppStatusAC} from "./app-reducer";
 import {Dispatch} from "redux";
-import {AppRootStateType} from "./store";
+import {AppRootStateType} from "../state/store";
 
 type InitialStateType = {
     movies: MovieTypeDomainType[]

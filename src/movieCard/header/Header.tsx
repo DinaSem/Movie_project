@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import s from "./header.module.css";
 import {useDispatch} from "react-redux";
-import {GenresType, searchMoviesTC, setGenreMovieAC} from "../state/movies-reducer";
+import {GenresType, searchMoviesTC, setGenreMovieAC} from "../bll/movies-reducer";
 import SuperSelect from "../../components/SuperSelect/SuperSelect";
 
 const genres: GenresType[] = ['All', 'Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary',

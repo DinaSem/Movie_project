@@ -1,13 +1,13 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {DataType, MovieType} from "./movie-api";
-import {MovieCard} from "./MovieCard";
-import s from './appForMovie.module.css'
+import {DataType, MovieType} from "../dal/movie-api";
+import {MovieCard} from "./MovieCard/MovieCard";
+import s from '../AppForMovie/appForMovie.module.css'
 import {Header} from "./header/Header";
 import SuperSelect from "../components/SuperSelect/SuperSelect";
-import {fetchMoviesTC, GenresType, RatingType, setGenreMovieAC} from "./state/movies-reducer";
+import {fetchMoviesTC, GenresType, RatingType, setGenreMovieAC} from "./bll/movies-reducer";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType, useAppSelector} from "./state/store";
-import {Pagination} from "./Pagination";
+import {Pagination} from "../components/Pagination/Pagination";
 
 
 

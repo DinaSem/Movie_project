@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {GenresType, RatingType} from "./state/movies-reducer";
+import {GenresType, RatingType} from "../movieCard/bll/movies-reducer";
 
 const instance = axios.create({
     baseURL: 'https://yts.mx/api/v2/',

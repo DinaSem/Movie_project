@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {MovieType} from "./movie-api";
+import {MovieType} from "../../dal/movie-api";
 import s from './movieCard.module.css'
 
 type PropsType = {

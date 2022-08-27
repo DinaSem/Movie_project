@@ -5,7 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './movieCard/state/store';
-import AppForMovie from "./movieCard/AppForMovie";
+import AppForMovie from "./AppForMovie/AppForMovie";
 import {BrowserRouter, HashRouter} from "react-router-dom";
 
 

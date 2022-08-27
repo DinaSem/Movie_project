@@ -1,11 +1,16 @@
 import React from 'react';
-import s from './Navbar.module.css'
-import logo from './images/dina.png'
-import {Link} from "react-router-dom";
+import s from './Footer.module.css'
+import logo from "../images/dina.png";
+import logoGit from "../images/github_logo.png";
+import logoTelega from "../images/logo_telegram.png";
 
-export const Navbar = () => {
+export const Footer = () => {
     return (
             <div className={s.nav}>
+                {/*<nav>*/}
+                {/*    <Link to={{pathname:'/'}}>Главная</Link>*/}
+                {/*    <Link to={'/404'}>Ошибка</Link>*/}
+                {/*</nav>*/}
                 <input type="checkbox" id={s.navCheck}/>
                     <div className={s.navHeader}>
                         <div className={s.navTitle}>
@@ -21,9 +26,8 @@ export const Navbar = () => {
                     </div>
 
                     <div className={s.navLinks}>
-                        <Link to={{pathname:'/'}}>Home</Link>
-                        <Link to={{pathname:'about/'}}>About project</Link>
-
+                        <a href={'https://github.com/DinaSem'}>< img src={logoGit} className={s.logo} alt=""/></a>
+                        <a href={'https://t.me/DinaSem'}>< img src={logoTelega} className={s.logo} alt=""/></a>
                         {/*<a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>*/}
                         {/*<a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>*/}
                         {/*<a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>*/}
