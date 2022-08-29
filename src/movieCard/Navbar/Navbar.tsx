@@ -12,25 +12,19 @@ export const Navbar = () => {
                             <a href={'https://dinasem.github.io/Portfolio/#home'}>< img src={logo} className={s.logo} alt=""/></a>
                         </div>
                     </div>
-                    <div className={s.navBtn}>
-                        <label htmlFor={s.navCheck}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
-                    </div>
-
+                <div className={s.navBtn}>
+                    <label htmlFor={s.navCheck}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
                     <div className={s.navLinks}>
                         <Link to={{pathname:'/'}}>Home</Link>
                         <Link to={{pathname:'about/'}}>About project</Link>
 
-                        {/*<a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>*/}
-                        {/*<a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>*/}
-                        {/*<a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>*/}
-                        {/*<a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>*/}
                     </div>
             </div>
-
     );
 };
 

@@ -40,3 +40,33 @@ h3{
 p{
     font-weight: 500;
 }
+@media (max-width: 1222px) {
+    .movie {
+        width: 35%;
+        font-weight: 500;
+    }
+}
+@media (max-width: 1000px) {
+    .movie {
+        width: 40%;
+        font-weight: 500;
+    }
+}
+@media (max-width: 900px) {
+    .movie {
+        width: 45%;
+        font-weight: 500;
+    }
+}
+@media (max-width: 700px) {
+    .movie {
+        width: 55%;
+        font-weight: 500;
+    }
+}
+@media (max-width: 600px) {
+    .movie {
+        width: 65%;
+        font-weight: 500;
+    }
+}

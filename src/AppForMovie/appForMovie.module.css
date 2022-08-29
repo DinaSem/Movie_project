@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #EFF3F8;
+    background-color: #202122;
     margin: 0;
     padding: 0;
     max-height: 100%;
-
+    color: #fff
 }
 
 html,
